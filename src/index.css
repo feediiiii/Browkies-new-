@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0e0804;
+  color: #fff;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0804;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A853;
+  border-radius: 3px;
+}
+
+/* Radial gradient for hero */
+.bg-radial-gradient {
+  background: radial-gradient(ellipse at center, transparent 30%, #0e0804 80%);
+}
+
+/* Glass card */
+.glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
