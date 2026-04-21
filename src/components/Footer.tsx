@@ -13,17 +13,17 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-amber-100/40 text-sm leading-relaxed">
-              Authentic Tunisian cookies crafted with love and passed-down recipes. Fresh daily — order online and enjoy at home.
+              Cookies tunisiens authentiques préparés avec amour et des recettes transmises de génération en génération. Frais tous les jours — commandez en ligne et savourez chez vous.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4">Liens Rapides</h4>
             <ul className="space-y-2">
               {[
-                { label: "Our Cookies", href: "#menu" },
-                { label: "Place an Order", href: "#order" },
-                { label: "Track My Order", href: "#tracker" },
+                { label: "Nos Cookies", href: "#menu" },
+                { label: "Passer une Commande", href: "#order" },
+                { label: "Suivre Ma Commande", href: "#tracker" },
               ].map((link) => (
                 <li key={link.href}>
                   <a href={link.href} className="text-amber-100/40 hover:text-amber-300 transition-colors text-sm">
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-amber-100/20 text-sm">© 2026 browkiezzbyHajer. All rights reserved.</p>
           <p className="text-amber-100/20 text-sm flex items-center gap-1">
-            Made with <Heart size={12} className="text-red-400" fill="currentColor" /> in Tunisia
+            Fait avec <Heart size={12} className="text-red-400" fill="currentColor" /> en Tunisie
           </p>
         </div>
       </div>

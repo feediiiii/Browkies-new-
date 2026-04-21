@@ -100,10 +100,10 @@ export default function OrderSection({ onOrderPlaced }: Props) {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="text-amber-400 text-sm tracking-widest uppercase font-medium mb-3 block">Easy Checkout</span>
+          <span className="text-amber-400 text-sm tracking-widest uppercase font-medium mb-3 block">Paiement Facile</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">
-            Place Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Order</span>
+            Passez Votre{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Commande</span>
           </h2>
         </motion.div>
 
@@ -118,12 +118,12 @@ export default function OrderSection({ onOrderPlaced }: Props) {
               <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="text-7xl mb-6">
                 🎉
               </motion.div>
-              <h3 className="text-3xl font-bold text-white mb-3">Order Confirmed!</h3>
+              <h3 className="text-3xl font-bold text-white mb-3">Commande Confirmée !</h3>
               <p className="text-amber-100/60 mb-6 text-lg">
-                Your order <span className="text-amber-400 font-bold">#{orderId}</span> has been received. We're baking fresh cookies for you!
+                Votre commande <span className="text-amber-400 font-bold">#{orderId}</span> a été reçue. Nous préparons vos cookies frais !
               </p>
               <a href="#tracker" className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-4 rounded-full text-lg transition-colors">
-                Track Your Order →
+                Suivre Votre Commande →
               </a>
             </motion.div>
           ) : (
@@ -132,14 +132,14 @@ export default function OrderSection({ onOrderPlaced }: Props) {
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-white flex items-center gap-2">
                   <ShoppingBag size={20} className="text-amber-400" />
-                  Your Cart ({count} items)
+                  Votre Panier ({count} articles)
                 </h3>
 
                 {items.length === 0 ? (
                   <div className="border border-white/10 rounded-2xl p-10 text-center text-amber-100/40">
                     <p className="text-4xl mb-3">🛒</p>
-                    <p>Your cart is empty.</p>
-                    <a href="#menu" className="text-amber-400 hover:text-amber-300 text-sm mt-2 inline-block">Browse our menu →</a>
+                    <p>Votre panier est vide.</p>
+                    <a href="#menu" className="text-amber-400 hover:text-amber-300 text-sm mt-2 inline-block">Parcourez notre menu →</a>
                   </div>
                 ) : (
                   <div className="space-y-3">
@@ -191,23 +191,23 @@ export default function OrderSection({ onOrderPlaced }: Props) {
 
               {/* Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h3 className="text-xl font-bold text-white">Your Details</h3>
+                <h3 className="text-xl font-bold text-white">Vos Coordonnées</h3>
 
                 <div className="space-y-3">
                   <div>
-                    <label className="text-amber-100/60 text-sm mb-1.5 block">Full Name *</label>
+                    <label className="text-amber-100/60 text-sm mb-1.5 block">Nom Complet *</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                      placeholder="Your name"
+                      placeholder="Votre nom"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="text-amber-100/60 text-sm mb-1.5 block">Phone Number *</label>
+                    <label className="text-amber-100/60 text-sm mb-1.5 block">Numéro de Téléphone *</label>
                     <input
                       type="tel"
                       required
@@ -219,18 +219,18 @@ export default function OrderSection({ onOrderPlaced }: Props) {
                   </div>
 
                   <div>
-                    <label className="text-amber-100/60 text-sm mb-1.5 block">Email Address</label>
+                    <label className="text-amber-100/60 text-sm mb-1.5 block">Adresse Email</label>
                     <input
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      placeholder="your@email.com (optional)"
+                      placeholder="votre@email.com (optionnel)"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="text-amber-100/60 text-sm mb-2 block">Delivery Option</label>
+                    <label className="text-amber-100/60 text-sm mb-2 block">Option de Livraison</label>
                     <div className="grid grid-cols-2 gap-2">
                       {(["delivery", "pickup"] as const).map((type) => (
                         <button
@@ -243,7 +243,7 @@ export default function OrderSection({ onOrderPlaced }: Props) {
                               : "bg-white/5 border-white/10 text-white/60 hover:border-white/20"
                           }`}
                         >
-                          {type === "delivery" ? "🏠 Delivery" : "🛍️ Pickup"}
+                          {type === "delivery" ? "🏠 Livraison" : "🛍️ Retrait"}
                         </button>
                       ))}
                     </div>
@@ -251,12 +251,12 @@ export default function OrderSection({ onOrderPlaced }: Props) {
 
                   {form.deliveryType === "delivery" && (
                     <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}>
-                      <label className="text-amber-100/60 text-sm mb-1.5 block">Address *</label>
+                      <label className="text-amber-100/60 text-sm mb-1.5 block">Adresse *</label>
                       <textarea
                         required={form.deliveryType === "delivery"}
                         value={form.address}
                         onChange={(e) => setForm((f) => ({ ...f, address: e.target.value }))}
-                        placeholder="Your delivery address..."
+                        placeholder="Votre adresse de livraison..."
                         rows={2}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50 transition-all resize-none"
                       />
@@ -264,11 +264,11 @@ export default function OrderSection({ onOrderPlaced }: Props) {
                   )}
 
                   <div>
-                    <label className="text-amber-100/60 text-sm mb-1.5 block">Notes (optional)</label>
+                    <label className="text-amber-100/60 text-sm mb-1.5 block">Notes (optionnel)</label>
                     <textarea
                       value={form.notes}
                       onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))}
-                      placeholder="Any special requests?"
+                      placeholder="Des demandes spéciales ?"
                       rows={2}
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50 transition-all resize-none"
                     />
@@ -291,7 +291,7 @@ export default function OrderSection({ onOrderPlaced }: Props) {
                   ) : (
                     <>
                       <CheckCircle2 size={20} />
-                      Place Order — {total.toFixed(2)} TND
+                      Passer la Commande — {total.toFixed(2)} TND
                     </>
                   )}
                 </motion.button>

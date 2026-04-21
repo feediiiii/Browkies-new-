@@ -92,10 +92,10 @@ export default function Overview() {
   const totalRevenue = filteredOrders.reduce((sum, o) => sum + o.total, 0);
 
   const stats = [
-    { label: "Total Orders", value: filteredOrders.length, icon: ShoppingCart, color: "bg-blue-500" },
-    { label: "Pending", value: pendingOrders, icon: Clock, color: "bg-yellow-500" },
-    { label: "Preparing", value: preparingOrders, icon: TrendingUp, color: "bg-orange-500" },
-    { label: "Ready", value: readyOrders, icon: ShoppingCart, color: "bg-green-500" },
+    { label: "Commandes Totales", value: filteredOrders.length, icon: ShoppingCart, color: "bg-blue-500" },
+    { label: "En Attente", value: pendingOrders, icon: Clock, color: "bg-yellow-500" },
+    { label: "En Préparation", value: preparingOrders, icon: TrendingUp, color: "bg-orange-500" },
+    { label: "Prêt", value: readyOrders, icon: ShoppingCart, color: "bg-green-500" },
   ];
 
   if (loading) {
@@ -109,7 +109,7 @@ export default function Overview() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-white">Dashboard Overview</h1>
+        <h1 className="text-2xl font-bold text-white">Aperçu du Tableau de Bord</h1>
         <div className="relative date-picker-container">
           <button
             onClick={() => setShowDatePicker(!showDatePicker)}
@@ -138,7 +138,7 @@ export default function Overview() {
                     }}
                     className="px-3 py-2 text-xs bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 rounded transition-colors"
                   >
-                    Today
+                    Aujourd'hui
                   </button>
                   <button
                     onClick={() => {
@@ -147,7 +147,7 @@ export default function Overview() {
                     }}
                     className="px-3 py-2 text-xs bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 rounded transition-colors"
                   >
-                    Yesterday
+                    Hier
                   </button>
                   <button
                     onClick={() => {
@@ -156,7 +156,7 @@ export default function Overview() {
                     }}
                     className="px-3 py-2 text-xs bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 rounded transition-colors"
                   >
-                    This Week
+                    Cette Semaine
                   </button>
                   <button
                     onClick={() => {
@@ -165,13 +165,13 @@ export default function Overview() {
                     }}
                     className="px-3 py-2 text-xs bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 rounded transition-colors"
                   >
-                    This Month
+                    Ce Mois
                   </button>
                 </div>
 
                 {/* Custom Date Input */}
                 <div className="border-t border-gray-600 pt-3">
-                  <label className="block text-xs text-gray-400 mb-2">Custom Date</label>
+                  <label className="block text-xs text-gray-400 mb-2">Date Personnalisée</label>
                   <input
                     type="date"
                     value={selectedDate}
@@ -202,7 +202,7 @@ export default function Overview() {
               month: 'long',
               day: 'numeric'
             })
-          } • {filteredOrders.length} orders
+          } • {filteredOrders.length} commandes
         </p>
       </div>
 
@@ -221,7 +221,7 @@ export default function Overview() {
 
       {/* Revenue */}
       <div className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 rounded-2xl p-6 mb-8">
-        <p className="text-amber-100/60 text-sm mb-1">Total Revenue</p>
+          <p className="text-amber-100/60 text-sm mb-1">Revenus Totaux</p>
         <p className="text-4xl font-bold text-amber-300">{totalRevenue.toFixed(2)} TND</p>
       </div>
 
@@ -230,7 +230,7 @@ export default function Overview() {
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <Cookie className="w-5 h-5 text-amber-400" />
-            <h2 className="text-lg font-semibold text-white">Menu Items</h2>
+            <h2 className="text-lg font-semibold text-white">Articles du Menu</h2>
           </div>
           <p className="text-amber-100/60">
             {cookies.length} cookie types with {cookies.reduce((sum, c) => sum + c.flavors.length, 0)} total flavors
@@ -240,11 +240,11 @@ export default function Overview() {
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <TrendingUp className="w-5 h-5 text-green-400" />
-            <h2 className="text-lg font-semibold text-white">Order Stats</h2>
+            <h2 className="text-lg font-semibold text-white">Statistiques des Commandes</h2>
           </div>
-          <p className="text-amber-100/60">
-            Average order: {orders.length > 0 ? (totalRevenue / orders.length).toFixed(2) : "0"} TND
-          </p>
+            <p className="text-amber-100/60">
+              Commande moyenne: {orders.length > 0 ? (totalRevenue / orders.length).toFixed(2) : "0"} TND
+            </p>
         </div>
       </div>
     </div>

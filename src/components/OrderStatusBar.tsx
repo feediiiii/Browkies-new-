@@ -83,15 +83,15 @@ function OrderStatusBar() {
   const getStatusText = (status: string) => {
     switch (status) {
       case "pending":
-        return "Order Received";
+        return "Commande Reçue";
       case "confirmed":
-        return "Order Confirmed";
+        return "Commande Confirmée";
       case "preparing":
-        return "Being Prepared";
+        return "En Préparation";
       case "ready":
-        return "Ready for Pickup/Delivery";
+        return "Prêt pour Retrait/Livraison";
       default:
-        return "Unknown Status";
+        return "Statut Inconnu";
     }
   };
 
@@ -136,7 +136,7 @@ function OrderStatusBar() {
                 onClick={clearTrackedOrder}
                 className="text-amber-200 hover:text-white text-sm underline"
               >
-                Dismiss
+                Fermer
               </button>
             </div>
           </div>

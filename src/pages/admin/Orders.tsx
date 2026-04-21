@@ -135,7 +135,7 @@ export default function Orders() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-white">Orders Management</h1>
+        <h1 className="text-2xl font-bold text-white">Gestion des Commandes</h1>
         
         {/* Notification Toggle */}
         <button
@@ -168,7 +168,7 @@ export default function Orders() {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by order ID, name, or phone..."
+            placeholder="Rechercher par numéro de commande, nom ou téléphone..."
             className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50"
           />
         </div>
@@ -177,7 +177,7 @@ export default function Orders() {
           onChange={(e) => setStatusFilter(e.target.value as OrderStatus | "all")}
           className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400/50"
         >
-          <option value="all">All Status</option>
+          <option value="all">Tous les Statuts</option>
           {orderStatuses.map((status) => (
             <option key={status.key} value={status.key}>{status.label}</option>
           ))}
@@ -188,7 +188,7 @@ export default function Orders() {
       <div className="space-y-4">
         {filteredOrders.length === 0 ? (
           <div className="text-center py-12 text-amber-100/40">
-            No orders found
+            Aucune commande trouvée
           </div>
         ) : (
           filteredOrders.map((order) => (
@@ -263,7 +263,7 @@ export default function Orders() {
 
                     {/* Status Update */}
                     <div>
-                      <h4 className="text-amber-100/60 text-sm mb-2">Update Status</h4>
+                      <h4 className="text-amber-100/60 text-sm mb-2">Mettre à Jour le Statut</h4>
                       <div className="flex flex-wrap gap-2">
                         {orderStatuses.map((status) => (
                           <button

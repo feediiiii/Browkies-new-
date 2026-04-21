@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useCart } from "../context/CartContext";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Our Cookies", href: "#menu" },
-  { label: "Order", href: "#order" },
-  { label: "Track Order", href: "#tracker" },
+  { label: "Accueil", href: "#hero" },
+  { label: "Nos Cookies", href: "#menu" },
+  { label: "Commander", href: "#order" },
+  { label: "Suivre Commande", href: "#tracker" },
 ];
 
 export default function Navbar() {
@@ -54,7 +54,7 @@ export default function Navbar() {
             className="relative flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors"
           >
             <ShoppingCart size={16} />
-            <span className="hidden sm:inline">Cart</span>
+            <span className="hidden sm:inline">Panier</span>
             {count > 0 && (
               <motion.span
                 initial={{ scale: 0 }}

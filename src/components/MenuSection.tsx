@@ -38,11 +38,11 @@ function FlavorBadge({ flavor, cookieType }: { flavor: Flavor; cookieType: Cooki
     >
       <div className="flex-1">
         <p className="text-white font-medium text-sm">{flavor.name}</p>
-        <p className="text-amber-400 text-xs font-bold mt-0.5">{flavor.price.toFixed(2)} TND / piece</p>
+        <p className="text-amber-400 text-xs font-bold mt-0.5">{flavor.price.toFixed(2)} TND / pièce</p>
       </div>
       <div className="flex items-center gap-2">
         {!flavor.available && (
-          <span className="text-xs bg-gray-700 text-gray-400 px-2 py-0.5 rounded-full">Soon</span>
+          <span className="text-xs bg-gray-700 text-gray-400 px-2 py-0.5 rounded-full">Bientôt</span>
         )}
         {flavor.available && (
           <AnimatePresence mode="wait">
@@ -105,10 +105,10 @@ function CookieCard({ cookie }: { cookie: CookieTypeWithFlavors }) {
         </div>
         <div className="flex gap-2 mt-4 flex-wrap">
           <span className="text-xs bg-amber-500/20 border border-amber-500/30 text-amber-300 px-3 py-1 rounded-full">
-            {cookie.flavors.filter((f) => f.available).length} flavors available
+            {cookie.flavors.filter((f) => f.available).length} saveurs disponibles
           </span>
           <span className="text-xs bg-white/10 border border-white/10 text-white/60 px-3 py-1 rounded-full">
-            From {Math.min(...cookie.flavors.map((f) => f.price)).toFixed(2)} TND
+            À partir de {Math.min(...cookie.flavors.map((f) => f.price)).toFixed(2)} TND
           </span>
         </div>
       </div>
@@ -118,7 +118,7 @@ function CookieCard({ cookie }: { cookie: CookieTypeWithFlavors }) {
           onClick={() => setExpanded((v) => !v)}
           className="w-full text-left text-amber-400 hover:text-amber-300 text-sm font-medium flex items-center justify-between mt-2 mb-3"
         >
-          <span>Select Flavors</span>
+          <span>Sélectionner les Saveurs</span>
           <motion.span animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>▾</motion.span>
         </button>
 
@@ -200,14 +200,14 @@ export default function MenuSection() {
           className="text-center mb-16"
         >
           <span className="text-amber-400 text-sm tracking-widest uppercase font-medium mb-3 block">
-            Our Signature Collection
+            Notre Collection Signature
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">
-            {cookies.length} Types of{" "}
+            {cookies.length} Types de{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Cookies</span>
           </h2>
           <p className="text-amber-100/50 text-lg max-w-xl mx-auto">
-            Each type comes in multiple flavors — tap any card to see what's available today and add to your order instantly.
+            Chaque type existe en plusieurs saveurs — appuyez sur une carte pour voir ce qui est disponible aujourd'hui et ajoutez à votre commande instantanément.
           </p>
         </motion.div>
 
@@ -219,7 +219,7 @@ export default function MenuSection() {
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-12">
           <a href="#order" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors font-medium">
-            View your cart & place order →
+            Voir votre panier et passer commande →
           </a>
         </motion.div>
       </div>

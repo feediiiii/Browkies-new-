@@ -79,12 +79,12 @@ export default function TrackerSection({ latestOrder }: Props) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-amber-400 text-sm tracking-widest uppercase font-medium mb-3 block">Live Status</span>
+          <span className="text-amber-400 text-sm tracking-widest uppercase font-medium mb-3 block">Statut en Direct</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">
-            Track Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Order</span>
+            Suivez Votre{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Commande</span>
           </h2>
-          <p className="text-amber-100/50 text-base">Enter your order ID to see real-time status updates.</p>
+          <p className="text-amber-100/50 text-base">Entrez votre numéro de commande pour voir les mises à jour de statut en temps réel.</p>
         </motion.div>
 
         <motion.form
@@ -98,7 +98,7 @@ export default function TrackerSection({ latestOrder }: Props) {
             type="text"
             value={searchId}
             onChange={(e) => setSearchId(e.target.value)}
-            placeholder="Enter Order ID (e.g. TN3F8K2)"
+            placeholder="Entrez le numéro de commande (ex: TN3F8K2)"
             className="flex-1 bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-amber-400/50 transition-all"
           />
           <motion.button
@@ -109,7 +109,7 @@ export default function TrackerSection({ latestOrder }: Props) {
             className="px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl flex items-center gap-2 transition-colors disabled:opacity-50"
           >
             <Search size={18} />
-            Track
+            Suivre
           </motion.button>
         </motion.form>
 
@@ -126,7 +126,7 @@ export default function TrackerSection({ latestOrder }: Props) {
             className="text-center py-10 border border-white/10 rounded-2xl"
           >
             <p className="text-4xl mb-3">🔍</p>
-            <p className="text-white/60">Order not found. Please check your ID.</p>
+            <p className="text-white/60">Commande non trouvée. Veuillez vérifier votre numéro.</p>
           </motion.div>
         )}
 
@@ -138,7 +138,7 @@ export default function TrackerSection({ latestOrder }: Props) {
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
               <div>
-                <span className="text-amber-400 text-xs tracking-widest uppercase">Order ID</span>
+                <span className="text-amber-400 text-xs tracking-widest uppercase">Numéro de Commande</span>
                 <h3 className="text-2xl font-bold text-white mt-1">#{activeOrder.orderId}</h3>
                 <p className="text-white/50 text-sm">{activeOrder.customerName}</p>
               </div>
@@ -198,7 +198,7 @@ export default function TrackerSection({ latestOrder }: Props) {
 
             {activeOrder.items && activeOrder.items.length > 0 && (
               <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-white/50 text-sm mb-3">Order Items:</p>
+                <p className="text-white/50 text-sm mb-3">Articles de la Commande:</p>
                 <ul className="space-y-1.5">
                   {activeOrder.items.map((item, i) => (
                     <li key={i} className="text-white/70 text-sm flex items-center gap-2">

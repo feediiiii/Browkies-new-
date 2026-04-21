@@ -22,7 +22,7 @@ export default function AdminLogin() {
       navigate("/admin/dashboard");
     } catch (err: unknown) {
       console.error("Login error:", err);
-      setError("Invalid email or password");
+      setError("Email ou mot de passe invalide");
     } finally {
       setLoading(false);
     }
@@ -36,11 +36,11 @@ export default function AdminLogin() {
             <Cookie className="w-8 h-8 text-black" />
           </div>
           <h1 className="text-3xl font-bold text-white font-serif">TunisianBites</h1>
-          <p className="text-amber-300/60 mt-2">Admin Dashboard</p>
+          <p className="text-amber-300/60 mt-2">Tableau de Bord Admin</p>
         </div>
 
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-          <h2 className="text-xl font-semibold text-white mb-6">Sign In</h2>
+          <h2 className="text-xl font-semibold text-white mb-6">Se Connecter</h2>
 
           {error && (
             <div className="bg-red-500/20 border border-red-500/50 text-red-300 px-4 py-3 rounded-xl mb-4">
@@ -62,7 +62,7 @@ export default function AdminLogin() {
             </div>
 
             <div>
-              <label className="block text-amber-100/60 text-sm mb-2">Password</label>
+              <label className="block text-amber-100/60 text-sm mb-2">Mot de Passe</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -87,13 +87,13 @@ export default function AdminLogin() {
               disabled={loading}
               className="w-full py-3 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "Signing in..." : "Sign In"}
+              {loading ? "Connexion..." : "Se Connecter"}
             </button>
           </form>
 
           <div className="mt-6 pt-6 border-t border-white/10">
             <a href="/" className="block text-center text-amber-400 hover:text-amber-300 text-sm">
-              ← Back to Store
+              ← Retour à la Boutique
             </a>
           </div>
         </div>

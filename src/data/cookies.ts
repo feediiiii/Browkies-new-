@@ -87,9 +87,9 @@ export const orderStatuses: {
   icon: string;
   description: string;
 }[] = [
-  { key: "pending", label: "Order Received", icon: "📋", description: "We received your order!" },
-  { key: "confirmed", label: "Confirmed", icon: "✅", description: "Your order is confirmed." },
-  { key: "preparing", label: "Baking", icon: "👩‍🍳", description: "Freshly baking your cookies." },
-  { key: "ready", label: "Ready", icon: "📦", description: "Packed and ready for pickup/delivery!" },
-  { key: "delivered", label: "Delivered", icon: "🎉", description: "Enjoy your cookies!" },
+  { key: "pending", label: "Commande Reçue", icon: "📋", description: "Nous avons reçu votre commande !" },
+  { key: "confirmed", label: "Confirmée", icon: "✅", description: "Votre commande est confirmée." },
+  { key: "preparing", label: "Cuisson", icon: "👩‍🍳", description: "Cuisson fraîche de vos cookies." },
+  { key: "ready", label: "Prêt", icon: "📦", description: "Emballé et prêt pour retrait/livraison !" },
+  { key: "delivered", label: "Livrée", icon: "🎉", description: "Bon appétit !" },
 ];

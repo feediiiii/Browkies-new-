@@ -28,7 +28,7 @@ export default function HeroSection() {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase font-medium backdrop-blur-sm">
-            🇹🇳 Authentic Tunisian Cookies
+            🇹🇳 Cookies Tunisiens Authentiques
           </span>
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
         >
           Taste the{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500">
-            Magic
+            Magie
           </span>
           <br />
           Cookies
@@ -52,7 +52,7 @@ export default function HeroSection() {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-amber-100/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Fresh bakes✨ . Daily craving🤤 . MADE WITH LOVE & HEAT🔥
+          Cuisson fraîche✨ . Craving quotidien🤤 . FAIT AVEC AMOUR & CHALEUR🔥
         </motion.p>
 
         <motion.div
@@ -67,7 +67,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-black font-bold rounded-full text-lg shadow-lg shadow-amber-500/30 hover:shadow-amber-400/50 transition-shadow"
           >
-            Explore Menu 🍪
+            Explorer le Menu 🍪
           </motion.a>
           <motion.a
             href="#order"
@@ -75,7 +75,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-full text-lg hover:bg-white/20 transition-colors"
           >
-            Order Now →
+            Commander Maintenant →
           </motion.a>
         </motion.div>
       </div>
